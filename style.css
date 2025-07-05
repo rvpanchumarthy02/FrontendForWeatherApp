@@ -1,0 +1,204 @@
+/********************************************************************
+ * @author:      Kaven
+ * @email:       kaven@wuwenkai.com
+ * @website:     http://blog.kaven.xyz
+ * @file:        [Coding--VS Code] /Frontend For Review/style.css
+ * @create:      2025-07-05 01:46:24.837
+ * @modify:      2025-07-05 02:42:01.723
+ * @version:     
+ * @times:       24
+ * @lines:       205
+ * @copyright:   Copyright © 2025 Kaven. All Rights Reserved.
+ * @description: [description]
+ * @license:     [license]
+ ********************************************************************/
+
+/* Import a fun, elegant font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+:root {
+  --barbie-pink: #ff69b4;
+  --hot-pink: #ff1493;
+  --light-pink: #ffe4ec;
+  --lavender: #c3aed6;
+  --white: #fff;
+  --purple: #a084ca;
+  --accent: #f6c1f0;
+  --shadow: 0 2px 12px 0 rgba(220, 110, 200, 0.15);
+}
+
+body {
+  font-family: 'Quicksand', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--light-pink) 0%, var(--lavender) 100%);
+  margin: 0;
+  padding: 0;
+  color: var(--purple);
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(90deg, var(--barbie-pink) 60%, var(--hot-pink) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  box-shadow: var(--shadow);
+  letter-spacing: 2px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 1px 2px 6px #ffb6e6;
+}
+
+nav {
+  background: var(--lavender);
+  box-shadow: var(--shadow);
+  padding: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 2rem 0 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  background: var(--barbie-pink);
+  color: var(--white);
+}
+
+nav form {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 2rem;
+}
+
+nav input[type="search"] {
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  background: var(--white);
+  color: var(--purple);
+  outline: none;
+  transition: border 0.2s;
+}
+
+nav input[type="search"]:focus {
+  border: 1.5px solid var(--hot-pink);
+}
+
+nav input[type="submit"] {
+  background: linear-gradient(90deg, var(--barbie-pink), var(--hot-pink));
+  color: var(--white);
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1.2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px 0 #e7b5e6;
+  transition: background 0.2s;
+}
+
+nav input[type="submit"]:hover {
+  background: linear-gradient(90deg, var(--hot-pink), var(--barbie-pink));
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  min-height: 350px;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px dashed var(--accent);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  color: var(--hot-pink);
+  margin-top: 0;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: var(--purple);
+}
+
+footer {
+  background: var(--barbie-pink);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 0 1rem 0;
+  margin-top: 2rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  font-size: 1.1rem;
+  box-shadow: 0 -2px 12px 0 #bb89bb;
+}
+
+.footer-red {
+  color: #e22b17; 
+  font-weight: bold;/* a rich, readable red */
+}
+
+footer a {
+  color: #5a3e7f; /* your darker lavender */
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #ff69b4; /* Barbie pink on hover */
+}
+
+
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  nav ul {
+    gap: 1rem;
+    margin: 0 1rem;
+  }
+  nav form {
+    margin-right: 1rem;
+  }
+}
