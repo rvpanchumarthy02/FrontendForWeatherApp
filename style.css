@@ -1,20 +1,6 @@
-/********************************************************************
- * @author:      Kaven
- * @email:       kaven@wuwenkai.com
- * @website:     http://blog.kaven.xyz
- * @file:        [Coding--VS Code] /Frontend For Review/style.css
- * @create:      2025-07-05 01:46:24.837
- * @modify:      2025-07-05 02:42:01.723
- * @version:     
- * @times:       24
- * @lines:       205
- * @copyright:   Copyright © 2025 Kaven. All Rights Reserved.
- * @description: [description]
- * @license:     [license]
- ********************************************************************/
-
-/* Import a fun, elegant font from Google Fonts */
-/* Reset and base styles */
+html {
+  scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -220,3 +206,71 @@ footer a:hover {
         padding: 1rem;
     }
 }
+
+body.dark-mode {
+    color: #e5e7eb;
+    background: linear-gradient(135deg, #18181b 0%, #312e81 100%);
+}
+
+body.dark-mode header {
+    background: rgba(24, 24, 27, 0.1);
+}
+
+body.dark-mode nav {
+    background: rgba(24, 24, 27, 0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+body.dark-mode nav a {
+    color: #e5e7eb;
+}
+
+body.dark-mode nav a:hover {
+    background: #6366f1;
+    color: #fff;
+}
+
+body.dark-mode nav input[type="search"] {
+    background: #232338;
+    color: #e5e7eb;
+    border-color: #6366f1;
+}
+
+body.dark-mode nav input[type="submit"] {
+    background: #6366f1;
+}
+
+body.dark-mode nav input[type="submit"]:hover {
+    background: #312e81;
+}
+
+body.dark-mode section {
+    background: rgba(39, 39, 42, 0.9);
+    color: #e5e7eb;
+}
+
+body.dark-mode section h2 {
+    color: #6366f1;
+}
+
+body.dark-mode section p {
+    color: #a1a1aa;
+}
+
+body.dark-mode footer {
+    background: rgba(24, 24, 27, 0.8);
+    color: #e5e7eb;
+}
+
+body.dark-mode footer a {
+    color: #6366f1;
+}
+
+body.dark-mode footer a:hover {
+    color: #a5b4fc;
+}
+
+body.dark-mode .footer-red {
+    color: #f87171;
+}
+
