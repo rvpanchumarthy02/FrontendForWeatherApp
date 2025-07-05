@@ -14,25 +14,30 @@
     <!-- header goes here  -->
     <header>
         
-     <h1>Welcome to weather app!!!</h1>
+     <h1>Welcome to Weather App!!!</h1>
     </header>
     <!-- nav bar -->
     <nav aria-label="Main Navigation">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#weather">Weather</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#weather">Weather</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-         <!-- A Search form: another common non-linear
-           way to navigate through a site. -->
+    <!-- Dark/Light Mode Toggle Button -->
+    <button id="theme-toggle" aria-label="Toggle dark mode" style="margin-right: 1rem; background: none; border: none; cursor: pointer;">
+        <span id="theme-toggle-light" style="display: none;">🌞</span>
+        <span id="theme-toggle-dark" style="display: none;">🌙</span>
+    </button>
 
-      <form>
+    <!-- Search form -->
+    <form id="form">
         <input type="search" name="q" placeholder="Search query" />
         <input type="submit" value="Go!" />
-      </form>
-    </nav>
+    </form>
+</nav>
+
     
     <!-- main bar or part or whatever you call it  -->
     <main>
@@ -43,7 +48,9 @@
 
         <section id="weather">
            <h2>Weather</h2>
-           <p>This is the weather section of the page and weather is shown here</p>
+           <p>This is the weather section of the page and weather will be shown here</p>
+           <p>Weather info will be shown here once API is integrated.</p>
+
         </section>
         <section>
            <h2 id="about">About</h2>
@@ -60,7 +67,7 @@
     <a href="mailto:dontmailme@gmail.com">dontmailme@gmail.com</a>
     <span class="footer-red">
       or on <a href="https://x.com/?lang=en">X</a>. <br>
-      ©Copyright 2025 by rv. All rights reversed.
+      ©Copyright <span id="currentYear"></span> by rv. All rights reversed.
     </span>
   </p>
 </footer>
