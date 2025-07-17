@@ -16,3 +16,36 @@ document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
   }
 });
+
+//sticky header and nav
+window.onscroll = function() {myFunction()};
+let header = document.getElementById("myHeader");
+let sticky = header.offsetTop;
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+
+    header.classList.add("sticky");
+
+  } else {
+
+    header.classList.remove("sticky");
+
+  }
+
+}
+
+window.onscroll = function() {myFunction()};
+let headerNav = document.getElementById("mynav");
+let stickyNav = nav.offsetTop;
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+
+    nav.classList.add("sticky");
+
+  } else {
+
+    nav.classList.remove("sticky");
+
+  }
+
+}
