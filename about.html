@@ -3,75 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About | Weather.ly</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <header>
-        
-     <h1>Weather App</h1>
-    </header>
-    <!-- nav bar -->
-    <nav aria-label="Main Navigation">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dashboard.html">Weather</a></li>
-        <li><span>About</span></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <!-- Dark/Light Mode Toggle Button -->
-    <button id="theme-toggle" aria-label="Toggle dark mode" style="margin-right: 1rem; background: none; border: none; cursor: pointer;">
-        <span id="theme-toggle-light" style="display: none;">🌞</span>
-        <span id="theme-toggle-dark" style="display: none;">🌙</span>
-    </button>
-
-    <!-- Search form -->
-    <form id="form">
-        <input type="search" name="q" placeholder="Enter the city name" />
-        <input type="submit" value="Go!" />
-    </form>
-</nav>
-
+  
+  <!-- header -->
+  <header>  
+        <h1>Weather.ly</h1>
+        <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Weather</a></li>
+            <li><span class="active">About</span></li>
+        </ul>
+  </header>
     
     <!-- main bar or part or whatever you call it  -->
-    <main>
-        <!-- <section id="home">
-           <h2>Home</h2>
-           <p>Get the latest weather updates in your city!</p>
-            <h3>Create Account</h3>
-            <form id="signupForm">
-              <input type="text" name="name" placeholder="Full Name" required />
-              <input type="email" name="email" placeholder="Email Address" required />
-              <input type="password" name="password" placeholder="Password" required />
-              <input type="text" name="location" placeholder="City or Location" required />
-
-              <select name="unit" required>
-                <option value="">Preferred Unit</option>
-                <option value="Celsius">Celsius (°C)</option>
-                <option value="Fahrenheit">Fahrenheit (°F)</option>
-              </select>
-
-              <button type="submit">Sign Up</button>
-              <div class="success" id="successMessage"></div>
-            </form>
-        </section> -->
-
-        
-            
+    <main>            
            <h2 id="about">About</h2>
            <p>Hey, thanks for reaching the till here - Thanks for using my website.<br>
               I am Rudra Veena and I've created this Weather App as my very first project.<br>
               This weather app aims to not only show weather, but also be a scalable product and gets updated from time to time. <br>
               Tech Stack: <br>
-              HTML, CSS and JavaScript for frontend and node.js, Express, MongoDB, OAuth, and Redis <br>
+              HTML, CSS and JavaScript for frontend and node.js, Express, MongoDB, OAuth, and Redis in the backend part.<br>
               This is my <a href="https://github.com/rvpanchumarthy02">GitHub</a> and I'd love to connect with you. <br>
-              Feel free to give your advices, suggestions/ improvements/ questions and insights on <a href="https://x.com/RudraVeenaSayz"> X.</a>
-              
-           </p>
-
-        
-        
+              Feel free to give your advices, suggestions/ improvements/ questions and insights on <a href="https://x.com/RudraVeenaSayz"> X.</a><br>
+              You can even contact me in the above two platforms.
+           </p>       
     </main>
     <!-- footer guy -->
     <footer id="contact">
@@ -90,6 +49,9 @@
 <script src="script.js"></script> 
 </body>
 </html>
+
+
+ 
 
 
  
