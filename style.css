@@ -1,43 +1,86 @@
-html {
-  scroll-behavior: smooth;
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import "tailwindcss";
+
+/* :root {
+  --color-bg-light: white;
+  --color-bg-grad-1: #FFB6C1;
+  --color-bg-grad-2: #FFC0CB;
+  --color-bg-grad-3: #FF69B4;
+  --color-bg-grad-4: #FF1493;
+  --color-primary: #FF69B4;
+  --color-secondary: #FF1493;
+  --color-accent: #FF4500;
+  --color-highlight: #DDA0DD;
+  --color-yellow: #FFFF00;
+  --color-text: #2d2d2d;
+  --color-footer: #fff;
 }
+
+.darkmode {
+  --color-bg-light: #181824;
+  --color-bg-grad-1: #312d37;
+  --color-bg-grad-2: #5f316d;
+  --color-bg-grad-3: #831843;
+  --color-bg-grad-4: #121212;
+  --color-primary: #FF1493;
+  --color-secondary: #FF69B4;
+  --color-accent: #FFB6C1;
+  --color-highlight: #DDA0DD;
+  --color-yellow: #D6CB00;
+  --color-text: #fff;
+  --color-footer: #212121;
+} */
+
+/* CSS Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    font: 1.5rem "Nunito", sans-serif;
     min-height: 100vh;
+    background-image: radial-gradient(white, lightpink, pink, hotpink, deeppink);
+    background-image: url(images/history_banner-3e72b47aa91f9e874b5e56197a88feacafd37ad4eaccfa3974302b37004ec7f5.png);
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header styles */
 header {
+    display: grid;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 1.5rem;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(79, 42, 172, 0.1);
+    top: 0;
+    position: sticky;
 }
 
 header h1 {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 300;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: yellow;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px orangered;
+    text-align: center;
 }
 
 /* Navigation styles */
 nav {
-    background: rgba(255, 255, 255, 0.95);
+    background: white;
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    place-content: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -57,11 +100,16 @@ nav a {
 }
 
 nav a:hover {
-    background: #74b9ff;
+    background: hsl(239, 100%, 73%);
     color: white;
     transform: translateY(-2px);
 }
 
+nav .active{
+    background: plum;
+    padding: 0.3rem 1rem;
+    border-radius: 25px;
+}
 /* Search form styles */
 nav form {
     display: flex;
@@ -72,41 +120,39 @@ nav input[type="search"] {
     padding: 0.5rem 1rem;
     border: 2px solid #ddd;
     border-radius: 25px;
-    outline: none;
-    transition: border-color 0.3s ease;
 }
 
 nav input[type="search"]:focus {
-    border-color: #74b9ff;
+    color: blue;
 }
 
 nav input[type="submit"] {
     padding: 0.5rem 1.5rem;
-    background: #74b9ff;
-    color: white;
+    background: rgb(255, 116, 132);
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    font-weight: bolder;
 }
 
 nav input[type="submit"]:hover {
-    background: #0984e3;
+    background: #e3b709;
     transform: translateY(-1px);
 }
 
-/* Main content styles */
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+
+/* main content styles*/
+
+main{
+    flex-grow: 1;
+    color: black;
+    text-align: center;
 }
 
 section {
-    background: rgba(255, 255, 255, 0.9);
-    margin: 2rem 0;
-    padding: 2rem;
+    margin: 5rem;
+    padding: 10rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -118,7 +164,6 @@ section:hover {
 }
 
 section h2 {
-    color: #0984e3;
     font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -126,39 +171,118 @@ section h2 {
 
 section p {
     font-size: 1.1rem;
-    color: #666;
     line-height: 1.8;
 }
 
-/* Footer styles */
-footer {
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 3rem;
+.my-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.my-form label {
+  font-weight: 600;
+  text-align: left;
+  color: #333;
+}
+
+.my-form input[type="text"],
+.my-form input[type="email"],
+.my-form input[type="password"],
+.my-form select {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.my-form input[type="text"]:focus,
+.my-form input[type="email"]:focus,
+.my-form input[type="password"]:focus,
+.my-form select:focus {
+  outline: none;
+  border-color: deeppink;
+  box-shadow: 0 0 8px rgba(255, 69, 0, 0.5);
+}
+
+.my-form button {
+  padding: 0.75rem;
+  background-color: hotpink;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.my-form button:hover {
+  background-color: deeppink;
+}
+
+.my-form button + button {
+  margin-left: 1rem;
+}
+
+.my-form .success {
+  margin-top: 0.75rem;
+  color: green;
+  font-weight: 600;
+  min-height: 1.2em;
+  text-align: center;
+}
+
+/* Responsive inside form */
+@media (max-width: 480px) {
+  .my-form {
+    padding: 1.5rem;
+  }
+
+  .my-form button + button {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+
+/* footer styles */
+footer{
+    position: sticky;
+    bottom: 0;
+    padding: 1rem;
+    place-content: center;
+    background-color: white;
+    margin-top: auto;
 }
 
 footer p {
     font-size: 1rem;
     line-height: 1.6;
+    text-align: center;
 }
 
 footer a {
-    color: #74b9ff;
+    color: orangered;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #0984e3;
+    color: red;
 }
 
 .footer-red {
-    color: #ff7675;
+    color: black;
 }
 
-/* Responsive design */
+/* Responsive design  */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -187,90 +311,6 @@ footer a:hover {
         font-size: 1.5rem;
     }
 }
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
     
-    nav ul {
-        gap: 0.5rem;
-    }
-    
-    nav a {
-        padding: 0.3rem 0.8rem;
-        font-size: 0.9rem;
-    }
-    
-    section {
-        padding: 1rem;
-    }
-}
 
-body.dark-mode {
-    color: #e5e7eb;
-    background: linear-gradient(135deg, #18181b 0%, #312e81 100%);
-}
-
-body.dark-mode header {
-    background: rgba(24, 24, 27, 0.1);
-}
-
-body.dark-mode nav {
-    background: rgba(24, 24, 27, 0.95);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}
-
-body.dark-mode nav a {
-    color: #e5e7eb;
-}
-
-body.dark-mode nav a:hover {
-    background: #6366f1;
-    color: #fff;
-}
-
-body.dark-mode nav input[type="search"] {
-    background: #232338;
-    color: #e5e7eb;
-    border-color: #6366f1;
-}
-
-body.dark-mode nav input[type="submit"] {
-    background: #6366f1;
-}
-
-body.dark-mode nav input[type="submit"]:hover {
-    background: #312e81;
-}
-
-body.dark-mode section {
-    background: rgba(39, 39, 42, 0.9);
-    color: #e5e7eb;
-}
-
-body.dark-mode section h2 {
-    color: #6366f1;
-}
-
-body.dark-mode section p {
-    color: #a1a1aa;
-}
-
-body.dark-mode footer {
-    background: rgba(24, 24, 27, 0.8);
-    color: #e5e7eb;
-}
-
-body.dark-mode footer a {
-    color: #6366f1;
-}
-
-body.dark-mode footer a:hover {
-    color: #a5b4fc;
-}
-
-body.dark-mode .footer-red {
-    color: #f87171;
-}
 
